@@ -1,4 +1,4 @@
-glasslass!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title> MouseOver </title>
@@ -7,7 +7,7 @@ glasslass!DOCTYPE html>
  th { font-size: 30px; }
  table { margin-left: auto; margin-right: auto; }
 
- #table th { 
+ #table th {
    text-align: center;
    font-weight: bold; }
 
@@ -28,53 +28,70 @@ glasslass!DOCTYPE html>
    color: #fff; }
 
  #table .g {
-   background-color: #efec36;}
+  background-color: #efec36;}
 
- #table .d {
-   background-color: #55a7e6; }
- </style>
- </head>
+ #table .p {
+    background-color: #8510cf;
+    color: #fff; }
 
- <body>
-   <table> id="table">
-     <tr>
-       <th colspan="5">The Five Food Group</th>
-     </tr>
-     <tr>
-       <td clstrong"><strong><u>Fruits</u></strong>
-         <br>Banana
-         <br>Mango
-         <br>Watermelon
-        </td>
+#table .d {
+    background-color: #55a7e6; }
+</style>
+</head>
+
+<body>
+  <table id="table">
+    <tr>
+      <th colspan="5">The Five Food Groups</th>
+    </tr>
+    <tr>
+      <td class="f"><strong><u>Fruits</u></strong>
+        <br>Banana
+        <br>Mango
+        <br>Watermelon
+      </td>
+      <td class="v"><strong><u>Vegetables</u></strong>
+         <br>Broccoli
+         <br>Cabbage
+         <br>Carrots
+      </td>
       <td class="g"><strong><u>Grains</u></strong>
-         <br>table
+         <br>Rice
          <br>Bread
          <br>Pasta
-       </td>
-       <td class="p"<strong><u>Protein</u></strong>
+      </td>
+      <td class="p"><strong><u>Protein</u></strong>
          <br>Eggs
-         <br>Chicken 
+         <br>Chicken
          <br>Fish
-       </td>
-       <td class="d"><strong><u>Dairy</u></strong>
+      </td>
+      <td class="d"><strong><u>Dairy</u></strong>
          <br>Milk
          <br>Cheese
          <br>Yogurt 
        </td>
      </tr>
-   </table>
+  </table>
 
-  <script>
-    table.onmouseover = function(event) {
-    let target = event.target;
-    target.style.background = 'pink';
+<script>
+  table.onmouseover = function(event) {
+  let target = event.target;
+  target.style.background = 'pink';
 
-    text.value += 'over -> ${target.tagName}\n';
-    text.scrollTop =text.scrollHeight;
-};
+  text.value += 'over -> ${target.tagName}\n';
+  text.scrollTop = text.scrollHeight;
+}
 
-   table.onmouseout = function (event) {
-    let target = event.target;
-    target.style.background = '';
-   
-         
+table.onmouseout = function(event) {
+  let target = event.target;
+  target.style.background = '';
+
+  text.value += 'out -> ${target.tagName}\n';
+  text.scrollTop = text.scrollHeight;
+}
+</script>
+<p>The <b>onmouseover</b> event occurs when the mouse pointer <i>enters</i> an element. </p> 
+<p>The <b>onmouseout</b> event occurs when the mouse pointer <i>moves out</i> an element. </p> 
+</body>
+</html>
+    
